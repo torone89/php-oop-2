@@ -74,9 +74,9 @@ class CreditCard extends User
     }
 }
 
-$creditCard1 = new CreditCard("$firstname", "$lastname", "1111-2222-3333-4444", "230", "12-27");
+$creditCard1 = new CreditCard("1111-2222-3333-4444", "230", "12-27");
 
-$creditCard2 = new CreditCard("", "", "2222-3333-4444-5555", "562", "08-24");
+$creditCard2 = new CreditCard("2222-3333-4444-5555", "562", "08-24");
 
 
 
