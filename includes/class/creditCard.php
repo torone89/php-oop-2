@@ -1,8 +1,6 @@
-<!-- CLASSE FIGLIA DI USER:
- DETTAGLI CARTA DI CREDITO -->
 
 <?php
-require_once __DIR__ . "/user.php.php";
+
 class CreditCard extends User
 {
 
@@ -13,9 +11,8 @@ class CreditCard extends User
     private $expiryDate;
 
     // construct
-    function __construct($firstname, $lastname, $numberCard, $cvv, $expiryDate)
+    function __construct($numberCard, $cvv, $expiryDate)
     {
-        parent::__construct($firstname, $lastname);
 
         $this->setNumberCard($numberCard);
         $this->setCvv($cvv);
@@ -76,6 +73,10 @@ class CreditCard extends User
         return $this;
     }
 }
+
+$creditCard1 = new CreditCard("$firstname", "$lastname", "1111-2222-3333-4444", "230", "12-27");
+
+$creditCard2 = new CreditCard("", "", "2222-3333-4444-5555", "562", "08-24");
 
 
 
