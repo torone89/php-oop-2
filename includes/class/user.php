@@ -3,7 +3,7 @@
 // CREO VARIABILI
 class User
 {
-    public $first_name;
+    public $firstname;
     public $lastname;
     public $email;
     public $phonenumber;
