@@ -4,6 +4,8 @@ include __DIR__ . "/includes/db/data.php";
 include __DIR__ . "/includes/class/user.php";
 include __DIR__ . "/includes/class/shopping/cart.php";
 include __DIR__ . "/includes/class/customers/customer.php";
+include __DIR__ . "/includes/class/shipping/address.php";
+include __DIR__ . "/includes/class/shopping/creditCard.php";
 
 // STAMPO TUTTI I PRODOTTI FOOD
 var_dump($foods);
@@ -26,7 +28,20 @@ var_dump($cliente);
 $cliente->addToCart($food2);
 var_dump($cliente);
 
-?>
+// Creo un indirizzo
+$indirizzo = new Address("Francesco Tovani", 'via cavour 22', '54033', 'carrara', 'italy');
+var_dump($indirizzo);
+
+//Creo Carta di credito
+$carta = new CreditCard("1111-2222-3333-4444", 420, "13-09-2024");
+var_dump($carta);
+// per vedere la data di scandenza della carta
+var_dump($carta->getExpiryDate());
+
+// verifico se è valida la carta
+var_dump($carta->isExpiry());
+
+?>/
 <!DOCTYPE html>
 <html lang="it">
 
