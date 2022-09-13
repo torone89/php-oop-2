@@ -4,6 +4,8 @@ include __DIR__ . "/includes/class/products.php";
 include __DIR__ . "/includes/class/foods.php";
 include __DIR__ . "/includes/class/games.php";
 include __DIR__ . "/includes/class/accessories.php";
+include __DIR__ . "/includes/class/registerUser.php";
+include __DIR__ . "/includes/class/creditCard.php";
 ?>
 <!DOCTYPE html>
 <html lang="it">
@@ -38,26 +40,10 @@ include __DIR__ . "/includes/class/accessories.php";
                 <p><span class="fw-bold">Numero di telefono:</span> <?php echo $user->phonenumber ?></p>
                 <p><span class="fw-bold">Email:</span> <?php echo $user->email ?></p>
                 <p><span class="fw-bold">Registrato:</span> <?php echo $user->isRegister ?></p>
-
             </div>
             </div>
         <?php } ?>
 
-        <?php
-        foreach ($users as $user) {
-        ?>
-            <div class="text-center mb-3 p-4">
-
-                <h5 class='text-uppercase fw-bold fs-6 mt-3'>utenti</h5>
-                <p><span class="fw-bold">Nome Utente:</span> <?php echo $user->firstname ?></p>
-                <p><span class="fw-bold">Cognome Utente:</span> <?php echo $user->lastname ?></p>
-                <p><span class="fw-bold">Numero di telefono:</span> <?php echo $user->phonenumber ?></p>
-                <p><span class="fw-bold">Email:</span> <?php echo $user->email ?></p>
-                <p><span class="fw-bold">Registrato:</span> <?php echo $user->isRegister ?></p>
-
-            </div>
-            </div>
-        <?php } ?>
     </main>
 </body>
 

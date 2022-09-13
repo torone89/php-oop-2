@@ -1,7 +1,7 @@
 
 <?php
 
-class CreditCard extends User
+class CreditCard
 {
 
     // variables
