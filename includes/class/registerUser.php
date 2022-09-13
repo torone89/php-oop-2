@@ -7,10 +7,8 @@ class RegisteredUser extends user
     protected $password;
     protected $discount = 20;
 
-
-    public function __construct($username, $password, $discount)
+    public function __construct($username, $password, $discount,)
     {
-
         $this->setUsername($username);
         $this->setPassword($password);
         $this->setDiscount($discount);

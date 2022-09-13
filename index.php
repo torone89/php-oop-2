@@ -1,11 +1,10 @@
 <?php
+
+include __DIR__ . "/includes/db/data.php";
 include __DIR__ . "/includes/class/user.php";
-include __DIR__ . "/includes/class/products.php";
-include __DIR__ . "/includes/class/foods.php";
-include __DIR__ . "/includes/class/games.php";
-include __DIR__ . "/includes/class/accessories.php";
-include __DIR__ . "/includes/class/registerUser.php";
-include __DIR__ . "/includes/class/creditCard.php";
+
+var_dump($foods)
+
 ?>
 <!DOCTYPE html>
 <html lang="it">

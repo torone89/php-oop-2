@@ -1,14 +1,13 @@
 
 <?php
 
-class CreditCard
+class Credit
 {
-
     // variables
 
-    private $numberCard;
-    private $cvv;
-    private $expiryDate;
+    public $numberCard;
+    public $cvv;
+    public $expiryDate;
 
     // construct
     function __construct($numberCard, $cvv, $expiryDate)
@@ -73,11 +72,5 @@ class CreditCard
         return $this;
     }
 }
-
-$creditCard1 = new CreditCard("1111-2222-3333-4444", "230", "12-27");
-
-$creditCard2 = new CreditCard("2222-3333-4444-5555", "562", "08-24");
-
-
 
 ?>
