@@ -2,8 +2,20 @@
 
 include __DIR__ . "/includes/db/data.php";
 include __DIR__ . "/includes/class/user.php";
+include __DIR__ . "/includes/class/shopping/cart.php";
 
-var_dump($foods)
+// STAMPO TUTTI I PRODOTTI FOOD
+var_dump($foods);
+
+// AGGIUNGO Il PRODOTTO 1 Del food al Carrello
+$carrello = new Cart();
+
+$carrello->addProduct($food1);
+var_dump($carrello);
+
+// Rimuovo Il PRODOTTO 1 Del food al Carrello
+$carrello->removeProduct($food1);
+var_dump($carrello);
 
 ?>
 <!DOCTYPE html>

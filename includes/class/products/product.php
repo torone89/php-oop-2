@@ -12,7 +12,7 @@ class Product
     // CONSTRUCT 
     public function __construct($nameproduct, $description, $animalsTypes, $price)
     {
-
+        $this->setId();
         $this->setNameproduct($nameproduct);
         $this->setDescription($description);
         $this->setAnimalsTypes($animalsTypes);
@@ -31,7 +31,7 @@ class Product
     /**
      * Set the value of id (automizzo il set ID (ogni volta ne assegna uno lui in automatico))
      */
-    public function setId($id): self
+    public function setId(): self
     {
         $this->id = uniqid();
 
