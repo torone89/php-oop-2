@@ -6,6 +6,7 @@ include __DIR__ . "/includes/class/shopping/cart.php";
 include __DIR__ . "/includes/class/customers/customer.php";
 include __DIR__ . "/includes/class/shipping/address.php";
 include __DIR__ . "/includes/class/shopping/creditCard.php";
+include __DIR__ . "/includes/class/shopping/order.php";
 
 // STAMPO TUTTI I PRODOTTI FOOD
 var_dump($foods);
@@ -41,7 +42,12 @@ var_dump($carta->getExpiryDate());
 // verifico se è valida la carta
 var_dump($carta->isExpiry());
 
-?>/
+// Creo un ordine  -- 100 = amount
+// Stampo nell'ordine tutti i cibi presenti nei data [3];
+$ordine = new Order($indirizzo, $carta, [$foods], 100);
+var_dump($ordine);
+
+?>
 <!DOCTYPE html>
 <html lang="it">
 
