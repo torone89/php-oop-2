@@ -3,6 +3,7 @@
 include __DIR__ . "/includes/db/data.php";
 include __DIR__ . "/includes/class/user.php";
 include __DIR__ . "/includes/class/shopping/cart.php";
+include __DIR__ . "/includes/class/customers/customer.php";
 
 // STAMPO TUTTI I PRODOTTI FOOD
 var_dump($foods);
@@ -16,6 +17,14 @@ var_dump($carrello);
 // Rimuovo Il PRODOTTO 1 Del food al Carrello
 $carrello->removeProduct($food1);
 var_dump($carrello);
+
+// Cliente non registrato con unn carrello (vuoto)
+$cliente = new Customer();
+var_dump($cliente);
+
+// Il cliente Aggiunge Food2 al carrello
+$cliente->addToCart($food2);
+var_dump($cliente);
 
 ?>
 <!DOCTYPE html>

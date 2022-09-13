@@ -43,6 +43,8 @@ class Cart
             foreach ($this->products as $key => $value) {
             } // Value => Il singolo Prodotto ad ogni giro __ Key = Indice
             if ($value->getId() === $id) unset($this->products[$key]); //distruggo la variabile
+        } else {
+            throw new Exception("$product must be instanceof Products");
         }
     }
 }
